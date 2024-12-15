@@ -1,71 +1,6 @@
 /* style */
 body {
-    .titillium-web-extralight {
-        font-family: "Titillium Web", serif;
-        font-weight: 200;
-        font-style: normal;
-    }
-      
-    .titillium-web-light {
-        font-family: "Titillium Web", serif;
-        font-weight: 300;
-        font-style: normal;
-    }
-      
-    .titillium-web-regular {
-        font-family: "Titillium Web", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-      
-    .titillium-web-semibold {
-        font-family: "Titillium Web", serif;
-        font-weight: 600;
-        font-style: normal;
-    }
-      
-    .titillium-web-bold {
-        font-family: "Titillium Web", serif;
-        font-weight: 700;
-        font-style: normal;
-    }
-      
-    .titillium-web-black {
-        font-family: "Titillium Web", serif;
-        font-weight: 900;
-        font-style: normal;
-    }
-      
-    .titillium-web-extralight-italic {
-        font-family: "Titillium Web", serif;
-        font-weight: 200;
-        font-style: italic;
-    }
-      
-    .titillium-web-light-italic {
-        font-family: "Titillium Web", serif;
-        font-weight: 300;
-        font-style: italic;
-    }
-      
-    .titillium-web-regular-italic {
-        font-family: "Titillium Web", serif;
-        font-weight: 400;
-        font-style: italic;
-    }
-      
-    .titillium-web-semibold-italic {
-        font-family: "Titillium Web", serif;
-        font-weight: 600;
-        font-style: italic;
-    }
-      
-    .titillium-web-bold-italic {
-        font-family: "Titillium Web", serif;
-        font-weight: 700;
-        font-style: italic;
-    }
-      
+    font-family: 'Courier New', Courier, monospace;
     background-color: #6ee5e3;
     color: #333333;
     text-align: center;
@@ -75,6 +10,6 @@ body {
 
 /* header */
 h1 {
-    font-size: 24px;
-    margin-top: 50px;
+    font-size: 40px;
+    margin-top: 100px;
 }
