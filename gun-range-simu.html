@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gun Range Demo</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script>
+        // Khởi tạo canvas
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Tọa độ súng
+        const gunPosition = { x: 400, y: 300 };
+
+        // Tầm bắn của súng (pixels)
+        const gunRange = 150;
+
+        // Hàm vẽ súng và tầm bắn
+        function drawGunRange() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Vẽ vòng tròn tầm bắn
+            ctx.beginPath();
+            ctx.arc(gunPosition.x, gunPosition.y, gunRange, 0, Math.PI * 2);
+            ctx.strokeStyle = "rgba(0, 255, 0, 0.5)";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Vẽ súng (hình tròn nhỏ)
+            ctx.beginPath();
+            ctx.arc(gunPosition.x, gunPosition.y, 10, 0, Math.PI * 2);
+            ctx.fillStyle = "red";
+            ctx.fill();
+        }
+
+        // Chạy hàm vẽ liên tục
+        function gameLoop() {
+            drawGunRange();
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Bắt đầu vòng lặp
+        gameLoop();
+    </script>
+</body>
+</html>
